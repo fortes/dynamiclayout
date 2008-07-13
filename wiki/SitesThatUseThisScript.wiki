@@ -1,0 +1,4 @@
+#summary A list of sites that use the dynamic layout script
+
+  * [http://fortes.com Fortes]
+  * [http://fil-ter.com fil-ter]
