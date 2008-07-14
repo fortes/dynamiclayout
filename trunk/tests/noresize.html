@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Dynamic Layout -- NoResize Test</title>
+        <style type="text/css">
+            body.bw-min
+            {
+                background: #ffe;
+            }
+
+            body.bw-800
+            {
+                background: #fef;
+            }
+
+            body.bw-1000
+            {
+                background: #eff;
+            }
+
+            body.bw-1200
+            {
+                background: #fef;
+            }
+
+            #min, #eight-hundred, #one-thousand, #twelve-hundred
+            {
+                color: #ccc;
+            }
+
+            .bw-min #min, .bw-800 #eight-hundred, .bw-1000 #one-thousand, .bw-1200 #twelve-hundred
+            {
+                color: #000;
+                font-weight: bold;
+            }
+
+            .bw-min #unknown, .bw-800 #unknown, .bw-1000 #unknown, .bw-1200 #unknown
+            {
+                color: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="../dynamiclayout.min.js?noresize" type="text/javascript"></script>
+        <h1>Dynamic Layout -- NoResize Test</h1>
+        <p>Current Width:</p>
+        <ul>
+            <li id="unknown">Unknown / Unset</li>
+            <li id="min">Minimum</li>
+            <li id="eight-hundred">800</li>
+            <li id="one-thousand">1000</li>
+            <li id="twelve-hundred">1200</li>
+        </ul>
+    </body>
+</html>
