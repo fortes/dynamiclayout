@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+	<head>
+		<title>Dynamic Layout: Dynamic Holy Grail Demo</title>
+		<style type="text/css">
+            /* Universal styling, applies across all sizes */
+            body
+            {
+                margin: 0;
+                padding: 0;
+            }
+
+            .clear
+            {
+                clear: both;
+            }
+
+            #footer
+            {
+                clear: both;
+            }
+
+            /* Default ( < 800px ): Both sidebars below content */
+            .sidebar
+            {
+                float: left;
+                margin: 0;
+                padding: 0;
+                /* IE sometimes has rounding errors that push 50% onto two lines */
+                width: 49.99%;
+            }
+
+            /* 800 px: Two col layout -- right col on bottom */
+            .bw-800 #content
+            {
+                margin-left: 200px;
+                float: right;
+            }
+
+            .bw-800 #left
+            {
+                margin-right: -200px;
+                width: 200px;
+            }
+
+            .bw-800 #right
+            {
+                float: none;
+                clear: both;
+            }
+
+            /* 1000px: Three col layout */
+            .bw-1000 #header, .bw-1000 #footer
+            {
+                margin: 0 -150px 0 -200px;
+            }
+            .bw-1000
+            {
+                padding: 0 150px 0 200px;
+            }
+            .bw-1000 #container
+            {
+                float: left;
+                width: 100%;
+                border-left: 200px solid #7da7d8;
+                border-right: 150px solid #7da7d8;
+                margin-left: -200px;
+                margin-right: -150px;
+                display: inline; /* Make IE work */
+            }
+            .bw-1000 #content
+            {
+                margin-right: -100%;
+                width: 100%;
+                float: left;
+            }
+
+            .bw-1000 #left
+            {
+                float: left;
+                width: 200px;
+                margin-left: -200px;
+                position: relative;
+            }
+
+            .bw-1000 #right
+            {
+                float: right;
+                width: 150px;
+                margin-right: -150px;
+                position: relative;
+            }
+            
+            /* Colors */
+            #header, #footer
+            {
+                background: #004481;
+                color: #fff;
+                padding: .5em 0;
+            }
+
+            .column
+            {
+                padding: .5em 0;
+            }
+
+            #footer a
+            {
+                color: #fff;
+            }
+
+            #container, .sidebar
+            {
+                background: #7da7d8;
+            }
+
+            #content
+            {
+                background: #baccea;
+            }
+		</style>
+	</head>
+	<body>
+        <script src="../dynamiclayout.min.js?sizes=800,1000" type="text/javascript"></script>
+		<div id="header">
+			<h1>Header: Dynamic Holy Grail</h1>
+		</div>
+		
+		<div id="container">
+            <div id="content" class="column">
+                <h2>Main Content</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla.</p>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla.</p>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla.</p>
+            </div>
+
+            <div id="left" class="sidebar column">
+                <h3>Left sidebar</h3>
+                <ul>
+                    <li>Lorem ipsum</li>
+                    <li>Lorem ipsum</li>
+                    <li>Lorem ipsum</li>
+                    <li>Lorem ipsum</li>
+                    <li>Lorem ipsum</li>
+                    <li>Lorem ipsum</li>
+                </ul>
+            </div>
+
+            <div id="right" class="sidebar column">
+                <h3>Right sidebar</h3>
+                <ul>
+                    <li>Lorem ipsum</li>
+                    <li>Lorem ipsum</li>
+                    <li>Lorem ipsum</li>
+                    <li>Lorem ipsum</li>
+                    <li>Lorem ipsum</li>
+                    <li>Lorem ipsum</li>
+                </ul>
+            </div>
+
+            <div class="clear"></div>
+	    </div>
+
+		<div id="footer">
+	        <p>Footer: This layout is based on A List Apart's <a href="http://www.alistapart.com/articles/multicolumnlayouts">Three-Column Layout</a>, modified to use <a href="http://fortes.com/projects/dynamiclayout">dynamic layout</a>.</p>	
+		</div>
+	</body>
+</html>
