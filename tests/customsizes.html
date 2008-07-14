@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Dynamic Layout -- Custom Sizes Test</title>
+        <style type="text/css">
+            body.bw-min
+            {
+                background: #ffe;
+            }
+
+            body.bw-600
+            {
+                background: #fef;
+            }
+
+            body.bw-900
+            {
+                background: #eff;
+            }
+
+            #min, #six-hundred, #nine-hundred
+            {
+                color: #ccc;
+            }
+
+            .bw-min #min, .bw-600 #six-hundred, .bw-900 #nine-hundred
+            {
+                color: #000;
+                font-weight: bold;
+            }
+
+            .bw-min #unknown, .bw-600 #unknown, .bw-900 #unknown
+            {
+                color: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="../dynamiclayout.min.js?sizes=600,900" type="text/javascript"></script>
+        <h1>Dynamic Layout -- Custom Sizes Test</h1>
+        <p>Current Width:</p>
+        <ul>
+            <li id="unknown">Unknown / Unset</li>
+            <li id="min">Minimum</li>
+            <li id="six-hundred">600</li>
+            <li id="nine-hundred">900</li>
+        </ul>
+    </body>
+</html>
